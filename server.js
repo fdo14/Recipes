@@ -61,9 +61,7 @@ app.use('/graphql', bodyParser.json(),
     app.use(express.static('client/build'))
 
     app.get('*', (req, res) => {
-        const index = path.join(__dirname, 'client', 'build', 'index.html');
-        res.sendFile(index);
-        //res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
+        res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
     })
 
 
